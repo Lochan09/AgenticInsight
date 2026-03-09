@@ -1,34 +1,35 @@
-**Project Overview**
-# AgenticInsight
-AgenticInsight is an autonomous AI system designed to bridge the gap between complex software architecture and technical education. Leveraging the CrewAI framework and FastAPI, the platform orchestrates a team of specialized AI agents to analyze, simplify, and document source code in real-time.
+# AgenticInsight 🚀
 
-The project demonstrates a production-grade AI-native architecture, where a React-based frontend communicates with a Python backend to trigger agentic workflows that go beyond standard LLM chat interfaces.
+**AgenticInsight** is a full-stack, AI-native platform that uses autonomous agents to analyze complex source code and provide simplified, metaphor-based explanations.
 
-Key Features
-Multi-Agent Orchestration: Utilizes specialized agents (e.g., "Senior Technical Educator" and "Fact-Checker") to ensure high-quality, verified documentation.
+## 🏗️ Architecture
+The project follows a **Decoupled 3-Tier Architecture** to ensure scalability and high performance:
+* **Frontend:** Built with **React.js**, managing user state and asynchronous API communication via Axios.
+* **Backend:** A high-performance **FastAPI** server serving as the RESTful gateway.
+* **AI Orchestration:** Powered by **LangChain**, utilizing specialized "Technical Educator" chains for code reasoning.
 
-Contextual Simplification: Automatically converts complex Full-Stack logic (React, Node.js, PostgreSQL) into beginner-friendly metaphors.
+## 🛠️ Tech Stack
+* [cite_start]**Frontend:** React.js, CSS3[cite: 8].
+* **Backend:** Python 3.14, FastAPI, Pydantic.
+* **AI Engine:** LangChain, OpenAI (GPT-4o-mini).
+* **Infrastructure:** REST API with CORS-secured endpoints.
 
-API-First Architecture: Built with a high-performance FastAPI backend, allowing for seamless integration with web and mobile clients.
+## 🚀 Installation & Setup
+1.  **Backend:**
+    ```bash
+    cd backend
+    python -m venv venv
+    source venv/bin/activate
+    pip install "fastapi>=0.100.0" "uvicorn>=0.20.0" "python-dotenv>=1.0.0" "langchain-openai>=0.0.1" --only-binary=:all:
+    uvicorn main:app --reload
+    ```
+2.  **Frontend:**
+    ```bash
+    cd frontend
+    npm install
+    npm start
+    ```
 
-Performance Tracking: Designed to log and analyze agent reasoning steps to ensure accuracy and reduce hallucinations.
-
-The Tech Stack
-AI Engine: CrewAI & LangChain (using GPT-4/Claude).
-
-Backend: Python (FastAPI).
-
-Frontend: React.js & Tailwind CSS.
-
-Database: PostgreSQL for storing generated insights and interaction history.
-
-DevOps: Dockerized environment for consistent deployment.
-
-How this benefits my career 
-This project serves as a practical demonstration of my ability to:
-
-Orchestrate AI: Moving from simple prompt engineering to building complex, goal-oriented agentic systems.
-
-Engineer for Scale: Implementing asynchronous backend processes in Python to handle AI-driven workloads.
-
-Bridge Roles: Combining my experience as a Full Stack Developer with my role as a Technical Educator to solve real-world knowledge transfer problems.
+## 🛡️ Resilience & Decisions
+* **Binary-First Installation:** Implemented a specific pip installation strategy to ensure compatibility with Python 3.14 on restricted environments.
+* **LCEL Logic:** Used LangChain Expression Language (LCEL) for a lightweight, faster reasoning engine compared to standard multi-agent frameworks.
