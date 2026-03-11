@@ -1,4 +1,5 @@
-AgenticInsight 🚀
+AgenticInsight 🚀:
+
 AgenticInsight is a full-stack, AI-native platform that audits source code for security, performance, and quality issues, then provides actionable fixes and a full corrected version users can copy directly.
 
 🏗️ Architecture
